@@ -1,0 +1,19 @@
+.nav {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+
+.nav.nav__active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav .nav__container {
+  transform: translate(100%, 0);
+  transition: all 0.5s ease-out;
+}
+
+.nav.nav__active .nav__container {
+  transform: translate(0, 0);
+}
