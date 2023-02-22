@@ -44,3 +44,8 @@ export interface ModalTypes {
   isSidebarOpen: boolean;
   toggleSidebar: () => void;
 }
+
+export interface AuthTypes {
+  isAuthenticated: boolean;
+  setAuthState(status: boolean): void;
+}

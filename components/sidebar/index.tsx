@@ -41,6 +41,7 @@ export const Sidebar = () => {
               <Link
                 href="/"
                 className="flex gap-x-4 items-center border-b border-[#F4F4F4] pb-3 w-full"
+                onClick={() => toggleSidebar()}
               >
                 <span className="hidden lg:inline">
                   <HomeIcon />
@@ -55,8 +56,9 @@ export const Sidebar = () => {
           <li>
             <button className="w-full">
               <Link
-                href="/"
+                href="/profile"
                 className="flex gap-x-4 items-center border-b border-[#F4F4F4] pb-3 w-full"
+                onClick={() => toggleSidebar()}
               >
                 <span className="hidden lg:inline">
                   <ProfileIcon />
@@ -73,8 +75,9 @@ export const Sidebar = () => {
           <li>
             <button className="w-full">
               <Link
-                href="/login"
+                href="/profile"
                 className="flex gap-x-4 items-center border-b border-[#F4F4F4] pb-3 w-full"
+                onClick={() => toggleSidebar()}
               >
                 <span className="hidden lg:inline">
                   <SettingsIcon />

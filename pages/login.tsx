@@ -1,10 +1,21 @@
 import { NextPage } from "next";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import userImage from "@/assets/images/user.svg";
 import { Input } from "@/components/common/input";
 import { LockIcon, MailIcon } from "@/assets/svg";
+import { useAuth } from "@/context/auth-context";
 
 const LoginPage: NextPage = () => {
+  const router = useRouter();
+  const { setAuthState } = useAuth();
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setAuthState(true);
+    router.push("/");
+  };
+
   return (
     <div className="min-h-screen w-full bg-register bg-cover bg-left-bottom flex justify-center flex-col items-center p-10">
       <div className="mb-10">
@@ -17,7 +28,10 @@ const LoginPage: NextPage = () => {
           <Image src={userImage} height={300} width={500} alt="Login Image" />
         </div>
         <div className="">
-          <form className="flex flex-col gap-y-4 lg:items-end">
+          <form
+            className="flex flex-col gap-y-4 lg:items-end"
+            onSubmit={handleSubmit}
+          >
             <Input
               name="email"
               placeholder="Email"
