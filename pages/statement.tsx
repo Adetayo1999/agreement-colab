@@ -2,10 +2,11 @@ import {Header} from "@/components/header"
 import {ArrowLeft} from "@/assets/svg"
 import Link from "next/link"
 import { Input } from "@/components/common/input"
+import { Layout } from "@/containers/layout"
 export const Statement = ( ) => {
     return (
-        <div>
-         <Header/>
+        <Layout>
+          <div>
          <div className="flex flex-col p-12 m-auto">
          <div className=" p-5 lg:p-10 pt-6 flex flex-col gap-y-5">
           <a>
@@ -179,8 +180,9 @@ export const Statement = ( ) => {
             <button className="bg-[#E1F4FB] text-black w-[200px] border-[5px] rounded-[0.625rem] border-black font-bold p-2"> Publish </button>
             <br />
             </div>
+            
         </div>
-        
+        </Layout>
     )
 }
 
