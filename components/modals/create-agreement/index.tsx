@@ -1,6 +1,7 @@
 import { MSAIcon, NDAIcon, SOWIcon } from "@/assets/svg";
 import { SignButton } from "@/components/buttons/sign-button";
 import { useModal } from "@/context";
+import Link from "next/link"
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useEffect } from "react";
 
@@ -49,7 +50,12 @@ export const CreateAgreement = () => {
                 <div className="flex flex-col gap-3 lg:flex-row lg:gap-5 flex-wrap justify-center ">
                   <SignButton Icon={NDAIcon} text="Non-Disclosure Agreement" />
                   <SignButton Icon={MSAIcon} text="Master service Agreement" />
-                  <SignButton Icon={SOWIcon} text="Statement of work" />
+                  <a>
+                    <Link href = "/statement">
+                    <SignButton Icon={SOWIcon} text="Statement of work" />
+                    </Link>
+                  </a>
+                 
                 </div>
 
                 <div className="mt-4 flex justify-center">

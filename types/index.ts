@@ -6,7 +6,7 @@ export interface IconType {
 }
 
 export interface InputType {
-  type: "text" | "email" | "password";
+  type: "text" | "email" | "password" | "number";
   placeholder: string;
   name: string;
   Icon?({ color, scale }: IconType): JSX.Element;
